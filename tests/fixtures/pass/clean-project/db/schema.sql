@@ -1,0 +1,25 @@
+-- 星链会员平台 · 核心表结构
+CREATE TABLE member (
+  id BIGINT PRIMARY KEY AUTO_INCREMENT,
+  phone VARCHAR(20) NOT NULL,
+  real_name VARCHAR(64),
+  id_card VARCHAR(32),
+  face_id VARCHAR(128),
+  level INT DEFAULT 1,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE member_event (
+  id BIGINT PRIMARY KEY AUTO_INCREMENT,
+  member_id BIGINT NOT NULL,
+  event_type VARCHAR(32),
+  amount DECIMAL(10, 2),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE gate_access (
+  id BIGINT PRIMARY KEY AUTO_INCREMENT,
+  member_id BIGINT NOT NULL,
+  gate_no VARCHAR(32),
+  passed_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

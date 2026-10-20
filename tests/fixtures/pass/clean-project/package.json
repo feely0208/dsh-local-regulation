@@ -1,0 +1,21 @@
+{
+  "name": "xinglian-member-platform",
+  "version": "2.0.1",
+  "private": true,
+  "description": "星链会员平台（已按上海、深圳地方条例整改的样本）",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "better-sqlite3": "^9.4.3",
+    "express": "^4.18.2",
+    "face-api.js": "^0.22.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5",
+    "vite": "^5.2.11",
+    "vitest": "^1.6.0"
+  }
+}

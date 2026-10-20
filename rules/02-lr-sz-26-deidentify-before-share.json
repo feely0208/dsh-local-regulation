@@ -1,0 +1,16 @@
+{
+  "id": "LR-SZ-26",
+  "title": "对外提供个人数据：去标识化处理",
+  "severity": "high",
+  "source": "《深圳经济特区数据条例》（2021-06-29 通过，2022-01-01 施行）第二十六条 —— 向他人提供个人数据的，应当先去标识化，使人无法识别特定自然人。本规则的对照判据：同一文件里出现导出/对外批量动作与身份证号、手机号等个人字段，但全项目找不到「mask / desensit / 脱敏 / 去标识 / anonymize / pseudonym」这类处理；本人查阅、复制的路由（self / me / my / profile）不计入触发。",
+  "advice": "这个文件同时出现了对外导出/批量输出的代码和身份证号、手机号等个人字段，但项目里找不到任何脱敏或去标识化的实现。请确认数据接收方、提供目的和字段范围；如果确实要把个人数据交给第三方，应先做去标识化（掩码、哈希、泛化等），并保留处理记录与合同依据；如果只是本人查阅、复制自己的数据（如 /me/export 这类路由），一般不属于「向他人提供」，可在报告处补充说明后忽略本条。",
+  "check": {
+    "type": "files-lack",
+    "pattern": "mask|desensit|脱敏|去标识|anonymi[sz]e|pseudonym",
+    "flags": "i",
+    "paths": [
+      "**/*"
+    ],
+    "when": "^(?![\\s\\S]*(?:/me/export|/self/export|/my/export|/profile/export|def export_my|def export_self))(?=[\\s\\S]*(?:to_csv|to_excel|dumpdata|SELECT \\* FROM|/export|/batch))(?=[\\s\\S]*(?:id_card|phone|mobile|email|身份证|手机号))"
+  }
+}
