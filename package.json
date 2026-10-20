@@ -1,6 +1,6 @@
 {
   "name": "@deepwhale-cn/dsh-local-regulation",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "上海、深圳的额外要求，国家法之外那一层",
   "type": "module",
   "license": "MIT",
@@ -27,6 +27,7 @@
     "rules",
     "docs",
     "cordis.patch.yml",
+    "tests/fixtures",
     "README.md"
   ],
   "main": "./lib/index.js",
