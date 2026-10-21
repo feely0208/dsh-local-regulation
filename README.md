@@ -1,5 +1,7 @@
 # @deepwhale-cn/dsh-local-regulation
 
+[![dshfind 收录](https://dshfind.com/api/badge/feely0208/dsh-local-regulation?lang=zh)](https://dshfind.com/zh/plugins/feely0208/dsh-local-regulation)
+
 [![Listed on dsh-plugin.org](https://dsh-plugin.org/badges/listed.svg)](https://dsh-plugin.org/zh/plugins/feely0208/dsh-local-regulation)
 
 **国家法之外还有一层：上海、深圳两市自己的数据条例。装它，在交付前知道这一层有没有被漏掉。**
